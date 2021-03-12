@@ -23,6 +23,7 @@ const userSchema = new mongoose.Schema ({
 });
 
 // use Secret String method instead of Two Key method
+// Environment Variable Setup
 // make sure to add this before creating mongoose model
 userSchema.plugin(encrypt, {secret: process.env.SECRET, encryptedFields: ['password']});
 
